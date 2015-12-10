@@ -5,7 +5,7 @@ alias rake='noglob rake' # https://github.com/robbyrussell/oh-my-zsh/issues/433
 alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
 alias pyserver='open http://localhost:8000 && python -m SimpleHTTPServer'
 alias refresh='source ~/.zshrc; echo "Reloaded .zshrc."'
-alias artisan='php artisan'
+alias pa='php artisan'
 alias oo='open .'
 
 # Add a spacer to the dock
@@ -83,3 +83,16 @@ alias plistbuddy="/usr/libexec/PlistBuddy"
 # Ring the terminal bell, and put a badge on Terminal.app’s Dock icon
 # (useful when executing time-consuming commands)
 alias badge="tput bel"
+
+# Apache
+alias apr="sudo /usr/sbin/apachectl restart"
+alias apg="sudo /usr/sbin/apachectl graceful"
+alias aps="sudo /usr/sbin/apachectl stop"
+
+# Bower
+alias bi="bower-installer"
+
+# Laravel
+alias pa="php artisan"
+alias vm="homestead ssh"
+alias h="homestead"

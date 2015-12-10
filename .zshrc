@@ -6,13 +6,13 @@ ZSH=$HOME/.oh-my-zsh
 
 # Set name of the OhMyZSH theme to load.
 # Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="dstufft"
+ZSH_THEME="agnoster"
 
 
 # Load the shell dotfiles, and then some:
 # * ~/.mix-path can be used to extend `$PATH`.
 # * ~/.mix-extra can be used for other settings you don’t want to commit to your repo.
-for file in ~/.mix-{path,exports,aliases,extra}; do
+for file in ~/.mix-{path,exports,aliases,extra,local}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
@@ -37,7 +37,7 @@ unset file
 # DISABLE_CORRECTION="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-COMPLETION_WAITING_DOTS="true"
+# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
@@ -53,3 +53,9 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git zsh-syntax-highlighting vi-mode)
 
 source $ZSH/oh-my-zsh.sh
+
+# Z
+. /usr/local/bin/z.sh
+
+# Bind Key Schema
+bindkey -e
